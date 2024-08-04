@@ -99,7 +99,7 @@ int ppaldescifrado(char * dirclaveprivada, char *dirfichero)
     FILE *ficheroCifrado = fopen(dirfichero, "r");
     if(clavePrivada == NULL || ficheroCifrado == NULL){
         fprintf(stderr, "Error al acceder al fichero.\n");
-        exit(-10);
+        exit(-3);
     }
     RSA *clavePrivadaobtenida = cargar_clave_privada(clavePrivada);
     fichero_descifrado = fopen("descifradoB.txt", "w");
